@@ -1,21 +1,18 @@
 / AOC Day 1 https://adventofcode.com/2022/day/1
-/ Puzzle Input
-q)l:read0`:C:/Users/glavery/Desktop/Gareth/Work/AOC/input1.txt
-
 / Part 1
-q)f:{max sum each (0,where null x)cut x:"J"$x}
+q)f:{max sum each (0,where null x)cut x:"J"$read0`:C:/Users/glavery/Desktop/Gareth/Work/AOC/input1.txt}
 q)f l
 68292
-q)\ts f l
-0 70992
-q)\ts:10000 f l
-3276 70992
+q)\ts f[]
+0 117152
+q)\ts:10000 f[]
+3240 117152
 
 / Part 2
 q)f2:{sum 3#desc sum each (0,where null x)cut x:"J"$x}
 q)f2 l
 203203
-q)\ts f2 l
-0 70992
-q)\ts:10000 f2 l
-4511 70992
+q)\ts f2[]
+0 117152
+q)\ts:10000 f2[]
+5027 117152
